@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: projection-libre
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python projection_libre.py
+    envVars:
+      - key: CODE_ACCES
+        sync: false
+      - key: TMDB_KEY
+        sync: false
